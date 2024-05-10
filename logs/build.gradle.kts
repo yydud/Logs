@@ -42,7 +42,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.yydud"
                 artifactId = "logs"
-                version = "0.0.5"
+                version = "0.0.6"
 
                 pom {
                     name.set("LOG-AOS")
@@ -54,7 +54,7 @@ afterEvaluate {
                 from(components["debug"])
                 groupId = "com.github.yydud"
                 artifactId = "logs"
-                version = "0.0.5"
+                version = "0.0.6"
 
                 pom {
                     name.set("LOG-AOS")
