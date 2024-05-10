@@ -5,6 +5,7 @@ import android.util.Log
 public object Logs {
     private val TAG: String = this.javaClass.name
     private var isLogEnabled: Boolean = true
+    private var isLogEnabled2: Boolean = true
 
     @JvmStatic
     public fun setLog(enable: Boolean){
