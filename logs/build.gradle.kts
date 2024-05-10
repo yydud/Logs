@@ -38,9 +38,9 @@ afterEvaluate {
         publications {
             register<MavenPublication>("release") {
                 from(components["release"])
-                groupId = "yydud"
+                groupId = "com.github.yydud"
                 artifactId = "logs"
-                version = "0.0.3"
+                version = "0.0.4"
 
                 pom {
                     name.set("LOG-AOS")
@@ -50,9 +50,9 @@ afterEvaluate {
 
             register<MavenPublication>("debug") {
                 from(components["debug"])
-                groupId = "yydud"
+                groupId = "com.github.yydud"
                 artifactId = "logs"
-                version = "0.0.3"
+                version = "0.0.4"
 
                 pom {
                     name.set("LOG-AOS")

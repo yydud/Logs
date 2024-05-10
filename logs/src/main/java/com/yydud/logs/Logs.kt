@@ -2,19 +2,53 @@ package com.yydud.logs
 
 import android.util.Log
 
-class Logs {
+object Logs {
+    private val TAG: String = this.javaClass.name
+    private var isLogEnabled: Boolean = true
 
-    companion object {
-        private val TAG: String = this@Companion.javaClass.name
-        private var IS_LOG: Boolean = true
+    @JvmStatic fun setLog(enable: Boolean){
+        isLogEnabled = enable
+    }
 
-        fun setLog(isLog: Boolean = true){
-            IS_LOG = isLog
+    @JvmStatic fun d(message: String){
+        if(isLogEnabled){
+            Log.d(TAG, message)
         }
-        fun d(log: String){
-            if(IS_LOG){
-                Log.d(TAG, log)
-            }
+    }
+
+    @JvmStatic fun w(message: String){
+        if(isLogEnabled){
+            Log.w(TAG, message)
+        }
+    }
+
+    @JvmStatic fun e(message: String){
+        if(isLogEnabled){
+            Log.e(TAG, message)
+        }
+    }
+
+    @JvmStatic fun i(message: String){
+        if(isLogEnabled){
+            Log.i(TAG, message)
+        }
+    }
+
+    @JvmStatic fun v(message: String){
+        if(isLogEnabled){
+            Log.v(TAG, message)
+        }
+    }
+
+    @JvmStatic fun wtf(message: String){
+        if(isLogEnabled){
+            Log.wtf(TAG, message)
+        }
+    }
+
+    @JvmStatic fun print(message: String){
+        if(isLogEnabled){
+            print(message)
         }
     }
 }
