@@ -30,7 +30,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+        freeCompilerArgs += "-Xexplicit-api=strict"
     }
+    resourcePrefix = "logsRN_"
 }
 
 afterEvaluate {
@@ -40,7 +42,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.yydud"
                 artifactId = "logs"
-                version = "0.0.4"
+                version = "0.0.5"
 
                 pom {
                     name.set("LOG-AOS")
@@ -52,7 +54,7 @@ afterEvaluate {
                 from(components["debug"])
                 groupId = "com.github.yydud"
                 artifactId = "logs"
-                version = "0.0.4"
+                version = "0.0.5"
 
                 pom {
                     name.set("LOG-AOS")
