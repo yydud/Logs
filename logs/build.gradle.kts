@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("maven-publish")
 }
 
 android {
@@ -29,6 +30,36 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            register<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "yydud"
+                artifactId = ""
+                version = "0.0.1"
+
+                pom {
+                    name.set("LOG-AOS")
+                    description.set("description")
+                }
+            }
+
+            register<MavenPublication>("debug") {
+                from(components["debug"])
+                groupId = "yydud"
+                artifactId = ""
+                version = "0.0.1"
+
+                pom {
+                    name.set("LOG-AOS")
+                    description.set("description")
+                }
+            }
+        }
     }
 }
 
