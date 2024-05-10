@@ -40,7 +40,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "yydud"
                 artifactId = ""
-                version = "0.0.1"
+                version = "0.0.2"
 
                 pom {
                     name.set("LOG-AOS")
@@ -52,7 +52,7 @@ afterEvaluate {
                 from(components["debug"])
                 groupId = "yydud"
                 artifactId = ""
-                version = "0.0.1"
+                version = "0.0.2"
 
                 pom {
                     name.set("LOG-AOS")
