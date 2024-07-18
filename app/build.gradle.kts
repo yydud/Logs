@@ -8,7 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.yydud.logs"
+        applicationId = "com.sample.yydud.logs"
         minSdk = 23
         targetSdk = 34
         versionCode = 1
