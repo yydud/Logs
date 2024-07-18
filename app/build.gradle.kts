@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    id("maven-publish")
 }
 
 android {
@@ -9,7 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.sample.yydud.logs"
+        applicationId = "com.yydud.logs"
         minSdk = 23
         targetSdk = 34
         versionCode = 1
