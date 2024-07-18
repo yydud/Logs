@@ -1,2 +1,11 @@
-jdk:
-  - openjdk17
+# jitpack.yml
+version: v1.0
+
+build:
+  before_install:
+    - mkdir -p build/outputs/aar
+    - cp libs/logs.aar build/outputs/aar/
+
+  publish:
+    artifact: build/outputs/aar/logs.aar
+    file: logs.aar
