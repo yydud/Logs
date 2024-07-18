@@ -22,4 +22,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "logs"
 include(":app")
-include(":logs")
